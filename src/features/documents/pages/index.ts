@@ -1,0 +1,11 @@
+export { default as DocumentActivityPage } from "./documents-id-activity-page";
+export { default as AskPage } from "./documents-id-ask-page";
+export { default as DocumentDetailPage } from "./documents-id-page";
+export { default as DocumentParticipantsPage } from "./documents-id-participants-page";
+export { default as ReviewPage } from "./documents-id-review-page";
+export { default as DocumentVerifyPage } from "./documents-id-verify-page";
+export { default as PdfViewerPage } from "./documents-id-viewer-page";
+export { default as DocumentsPage } from "./documents-page";
+export { default as SearchPage } from "./search-page";
+export { default as UploadPage } from "./upload-page";
+export { default as ProcessingPage } from "./upload-processing-page";

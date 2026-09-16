@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0985E7" />
+    <title>LexChain is offline</title>
+    <style>
+      :root { color-scheme: light; font-family: Arial, sans-serif; }
+      body { display: grid; min-height: 100vh; margin: 0; place-items: center; background: #f5f9ff; color: #10233d; }
+      main { width: min(32rem, calc(100% - 3rem)); text-align: center; }
+      h1 { margin: 0 0 0.75rem; color: #0985E7; }
+      p { margin: 0; line-height: 1.6; }
+      button { margin-top: 1.5rem; padding: 0.75rem 1.25rem; border: 0; border-radius: 0.5rem; background: #0985E7; color: white; font: inherit; cursor: pointer; }
+      button:focus-visible { outline: 3px solid #10233d; outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>You’re offline</h1>
+      <p>Reconnect to the internet to continue using LexChain.</p>
+      <button type="button" onclick="location.reload()">Try again</button>
+    </main>
+  </body>
+</html>

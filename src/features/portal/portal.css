@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@900&display=swap');
+
+:root {
+  --portal-bg: #F3F8FF;
+  --portal-surface: #FFFFFF;
+  --portal-surface-soft: #EAF4FF;
+  --portal-primary: #1689F5;
+  --portal-navy: #133B73;
+  --portal-text-muted: #6F8FB5;
+  --portal-border-soft: #D7EBFF;
+  --portal-success: #12A150;
+  --portal-success-soft: #EAF8F0;
+  --portal-warning: #F59E0B;
+  --portal-warning-soft: #FFF4DD;
+  --portal-danger: #D94B66;
+  --portal-info-soft: #EAF4FF;
+}
+
+.portal-root {
+  background-color: var(--portal-bg);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}

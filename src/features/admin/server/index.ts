@@ -1,0 +1,1 @@
+export { adminFetch } from "./fetch";

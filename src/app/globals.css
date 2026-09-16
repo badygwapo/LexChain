@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand */
+  --brand-blue: #0985E7;
+  --brand-blue-hover: #0770c4;
+  --brand-navy: #0C2B49;
+
+  /* Surfaces */
+  --surface-page: #F5FAFF;
+  --surface-card: #FFFFFF;
+  --surface-soft: #F8FBFF;
+  --surface-muted: #EEF4FB;
+  --surface-tint: #EAF4FF;
+  --surface-tint-alt: #EAF6FF;
+
+  /* Text */
+  --text-primary: #0C2B49;
+  --text-secondary: #64748b;
+  --text-muted: #4B6382;
+  --text-placeholder: #A7B4C4;
+
+  /* Borders */
+  --border-default: #E4EEF9;
+  --border-soft: #E8F0F8;
+  --border-medium: #D7E4F2;
+  --border-focus: #0985E7;
+
+  /* Status */
+  --status-success: #12A150;
+  --status-success-bg: #EAF8F0;
+  --status-success-border: #B4E8CC;
+  --status-error: #dc2626;
+  --status-error-bg: #FFF7F7;
+  --status-error-border: #F5C6C6;
+  --status-warning: #F59E0B;
+  --status-warning-bg: #FFF4DD;
+  --status-info-bg: #F1F8FF;
+  --status-info-border: #CFE7FC;
+  --status-info-text: #0C5B9C;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a[href],
+button:not(:disabled),
+[role="button"] {
+  cursor: pointer;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Global scrollbar hidden */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}

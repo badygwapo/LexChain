@@ -1,0 +1,132 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Expo
+.expo/
+.expo-shared/
+**/.expo/
+**/.expo-shared/
+expo-env.d.ts
+eas-build/
+**/eas-build/
+
+# Native / Generated
+ios/
+android/
+.kotlin/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Metro / Bundler
+.metro-health-check*
+.metro/
+**/.metro/
+
+# Build outputs & Checks
+dist/
+web-build/
+build/
+.next/
+out/
+.vercel/
+.tmp/
+apps/mobile/dist-*-check/
+**/dist-*-check/
+**/.next/
+**/out/
+**/coverage/
+
+# App specific
+app-example
+
+# Environment variables
+.env
+.env*
+!.env.example
+
+# TypeScript
+*.tsbuildinfo
+*.buildinfo
+
+# Logs & Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+debug.log
+
+# macOS
+.DS_Store
+*.pem
+
+# Temporary / Cache
+.tmp/
+.temp/
+.cache/
+.turbo/
+coverage/
+**/.cache/
+**/.turbo/
+
+# Editor directories (ignore most, allow useful shared files)
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+.zed/
+
+# AI Coding Agents & Tools (local configs)
+# .agents/
+.opencode/
+.sispyhus/
+.sisyphus/
+# skills-lock.json
+
+# Other common ignores
+*.swp
+*.swo
+.idea/
+.DS_Store
+Thumbs.db
+
+# *.pen
+
+# docs/
+
+graphify-out
+openapi.json
+
+*.pen
+.playwright-mcp
+.playwright-cli
+.worktrees/
+
+*.drawio
+*.md
+*.py
+*.pyc
+*.txt
+*.code-workspace
+*.md
+.claude
+.agents
+
+!docs/benchmark/*.md
+!docs/benchmark/*.txt
+
+# Active root web documentation
+!README.md
+!AGENTS.md
+!docs/ARCHITECTURE.md
+# Local agent execution artifacts
+.superpowers/
+next-env.d.ts
+output
+frontend/docs/expo-llms/
