@@ -4,6 +4,8 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { useState } from "react";
+import VisibilityOutlined from "@mui/icons-material/VisibilityOutlined";
+import VisibilityOffOutlined from "@mui/icons-material/VisibilityOffOutlined";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { getPortalLoginRedirect } from "@/features/access";
@@ -45,6 +47,7 @@ export function getRedirectPath(data: Record<string, unknown> | null): string {
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
   const mutation = useMutation({
@@ -95,17 +98,30 @@ export default function LoginPage() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
-          <label className="block">
-            <span className="text-[13px] font-black text-[#0C2B49]">Password</span>
-            <input
-              className="mt-2 min-h-12 w-full rounded-[14px] border border-[#E4EEF9] bg-[#F5FAFF] px-3.5 text-sm font-semibold text-[#0C2B49] outline-none focus:border-[#0985E7]"
-              type="password"
-              required
-              autoComplete="current-password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
+          <div>
+            <label htmlFor="login-password" className="text-[13px] font-black text-[#0C2B49]">Password</label>
+            <div className="relative mt-2">
+              <input
+                id="login-password"
+                className="min-h-12 w-full rounded-[14px] border border-[#E4EEF9] bg-[#F5FAFF] pl-3.5 pr-14 text-sm font-semibold text-[#0C2B49] outline-none focus:border-[#0985E7]"
+                type={showPassword ? "text" : "password"}
+                required
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button
+                type="button"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+                title={showPassword ? "Hide password" : "Show password"}
+                aria-controls="login-password"
+                onClick={() => setShowPassword((visible) => !visible)}
+                className="absolute inset-y-1 right-1 flex w-11 items-center justify-center rounded-[10px] text-[#0985E7] hover:bg-[#EAF4FF] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0985E7]"
+              >
+                {showPassword ? <VisibilityOffOutlined fontSize="small" aria-hidden="true" /> : <VisibilityOutlined fontSize="small" aria-hidden="true" />}
+              </button>
+            </div>
+          </div>
 
           <div className="flex items-center justify-between">
             <button
